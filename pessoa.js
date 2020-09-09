@@ -6,7 +6,7 @@ let cpf = document.querySelector("#cpf");
 let email = document.querySelector("#email");
 let telefone = document.querySelector("#telefone");
 
-
+//Função de formatação de nome
 const formataNome = (nome) => {
     let vetorNome = nome.split(' ');
     let nomeFormatado = '';
@@ -23,14 +23,17 @@ const formataNome = (nome) => {
     return nomeFormatado;
 }
 
+//Função de formatação de idade
 const formataIdade = (idade) => {
     return idade === 1 ? idade+' ano' : idade+' anos';
 }
 
+//Função de formatação de cpf
 const formataCpf = (cpf) => {
     return cpf.slice(0,3)+"."+cpf.slice(3,6)+"."+cpf.slice(6,9)+"-"+cpf.slice(9,11);
 }
 
+//Função de formatação de telefone
 const formataTelefone = (telefone) => {
     if(telefone.length<9){
         return "9"+telefone.slice(0,4)+"-"+telefone.slice(4,8);
@@ -43,6 +46,7 @@ const formataTelefone = (telefone) => {
     }
 }
 
+//Conferindo se usuario não é nulo e cas não seja mostrando dados
 if(usuario === null){
     alert("Nenhum usuário no sistema");
 }else{
